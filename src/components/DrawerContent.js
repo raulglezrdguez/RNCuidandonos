@@ -212,6 +212,60 @@ const DrawerContent = props => {
             onPress={() => navigate('Ejercicios')}>
             <Text>{'¿Yo puedo hacer ejercicios físicos?'}</Text>
           </TouchableRipple>
+          <TouchableRipple
+            style={[styles.link, {borderColor: colors.text}]}
+            onPress={() => navigate('Hormonas')}>
+            <Text>
+              {
+                'El envejecimiento y los tratamientos con hormonas. ¿Cuándo y cómo?'
+              }
+            </Text>
+          </TouchableRipple>
+          <TouchableRipple
+            style={[styles.link, {borderColor: colors.text}]}
+            onPress={() => navigate('Sexualidad')}>
+            <Text>{'La sexualidad en la "Edad plateada"'}</Text>
+          </TouchableRipple>
+          <TouchableRipple
+            style={[styles.link, {borderColor: colors.text}]}
+            onPress={() => navigate('Medicinas')}>
+            <Text>{'¡Ojo con las medicinas!'}</Text>
+          </TouchableRipple>
+          <TouchableRipple
+            style={[styles.link, {borderColor: colors.text}]}
+            onPress={() => navigate('Verano')}>
+            <Text>{'En verano...¡Cuidado con el calor!'}</Text>
+          </TouchableRipple>
+          <TouchableRipple
+            style={[styles.link, {borderColor: colors.text}]}
+            onPress={() => navigate('InsuficienciaRenal')}>
+            <Text>{'Viviendo con insuficiencia renal'}</Text>
+          </TouchableRipple>
+          <TouchableRipple
+            style={[styles.link, {borderColor: colors.text}]}
+            onPress={() => navigate('Colesterol')}>
+            <Text>{'Tengo el colesterol alto... ¿Y ahora qué hago?'}</Text>
+          </TouchableRipple>
+          <TouchableRipple
+            style={[styles.link, {borderColor: colors.text}]}
+            onPress={() => navigate('Bronquitis')}>
+            <Text>{'Viviendo con bronquitis crónica o enfisema'}</Text>
+          </TouchableRipple>
+          <TouchableRipple
+            style={[styles.link, {borderColor: colors.text}]}
+            onPress={() => navigate('Parkinson')}>
+            <Text>{'Viviendo con parkinson'}</Text>
+          </TouchableRipple>
+          <TouchableRipple
+            style={[styles.link, {borderColor: colors.text}]}
+            onPress={() => navigate('Artrosis')}>
+            <Text>{'Me duelen las articulaciones ¿Será por artrosis?'}</Text>
+          </TouchableRipple>
+          <TouchableRipple
+            style={[styles.link, {borderColor: colors.text}]}
+            onPress={() => navigate('Saludable')}>
+            <Text>{'Envejecimieto saludable'}</Text>
+          </TouchableRipple>
         </Drawer.Section>
       </Animated.View>
     </DrawerContentScrollView>
