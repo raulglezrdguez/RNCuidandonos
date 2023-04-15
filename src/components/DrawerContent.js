@@ -28,7 +28,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const DrawerContent = props => {
   //   const {progress, navigation, state} = props;
-  const progress = useDrawerProgress();
+  // const progress = useDrawerProgress();
   const {navigation} = props;
 
   const [errors] = useState({});
@@ -43,10 +43,10 @@ const DrawerContent = props => {
     }
   }, [chapter]);
 
-  const opacity = Animated.interpolateNode(progress, {
-    inputRange: [0, 1],
-    outputRange: [0, 1],
-  });
+  // const opacity = Animated.interpolateNode(progress, {
+  //   inputRange: [0, 1],
+  //   outputRange: [0, 1],
+  // });
 
   const storagePreferences = async () => {
     try {
@@ -73,7 +73,7 @@ const DrawerContent = props => {
           styles.drawerContent,
           {
             backgroundColor: colors.surface,
-            opacity,
+            // opacity,
           },
         ]}>
         <Drawer.Section title={'Preferencias'}>
@@ -265,6 +265,11 @@ const DrawerContent = props => {
             style={[styles.link, {borderColor: colors.text}]}
             onPress={() => navigate('Saludable')}>
             <Text>{'Envejecimieto saludable'}</Text>
+          </TouchableRipple>
+          <TouchableRipple
+            style={[styles.link, {borderColor: colors.text}]}
+            onPress={() => navigate('Legal')}>
+            <Text>{'Página legal'}</Text>
           </TouchableRipple>
         </Drawer.Section>
       </Animated.View>

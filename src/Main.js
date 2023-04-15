@@ -2,6 +2,7 @@
 import React from 'react';
 import {createDrawerNavigator} from '@react-navigation/drawer';
 import {
+  IconButton,
   DarkTheme as PaperDarkTheme,
   DefaultTheme as PaperDefaultTheme,
   Provider as PaperProvider,
@@ -37,6 +38,17 @@ import Isquemia from './screens/Isquemia';
 import Osteoporosis from './screens/Osteoporosis';
 import Prostata from './screens/Prostata';
 import Ejercicios from './screens/Ejercicios';
+import Hormonas from './screens/Hormonas';
+import Sexualidad from './screens/Sexualidad';
+import Medicinas from './screens/Medicinas';
+import Verano from './screens/Verano';
+import InsuficienciaRenal from './screens/InsuficienciaRenal';
+import Colesterol from './screens/Colesterol';
+import Bronquitis from './screens/Bronquitis';
+import Parkinson from './screens/Parkinson';
+import Artrosis from './screens/Artrosis';
+import Saludable from './screens/Saludable';
+import Legal from './screens/Legal';
 
 const CombinedDefaultTheme = {
   ...PaperDefaultTheme,
@@ -55,6 +67,23 @@ const CombinedDarkTheme = {
   },
 };
 
+const screenOptions = props => {
+  const {navigation} = props;
+
+  return {
+    headerLeft: ({}) => (
+      <IconButton
+        icon="notebook"
+        size={20}
+        onPress={() => {
+          console.log('open screenoptions');
+          navigation.toggleDrawer();
+        }}
+      />
+    ),
+  };
+};
+
 const Main = () => {
   const {theme} = usePreferencesState();
   const userTheme = theme === 'dark' ? CombinedDarkTheme : CombinedDefaultTheme;
@@ -64,6 +93,7 @@ const Main = () => {
       <NavigationContainer theme={userTheme}>
         <Drawer.Navigator
           initialRouteName="Inicio"
+          screenOptions={screenOptions}
           drawerContent={props => <DrawerContent {...props} />}>
           <Drawer.Screen
             name="Inicio"
@@ -163,6 +193,84 @@ const Main = () => {
             component={Ejercicios}
             options={{
               title: '¿YO PUEDO HACER EJERCICIOS FÍSICOS?',
+            }}
+          />
+          <Drawer.Screen
+            name="Hormonas"
+            component={Hormonas}
+            options={{
+              title:
+                'EL ENVEJECIMIENTO Y LOS TRATAMIENTOS CON HORMONAS. ¿CUÁNDO Y CÓMO?',
+            }}
+          />
+          <Drawer.Screen
+            name="Sexualidad"
+            component={Sexualidad}
+            options={{
+              title: 'LA SEXUALIDAD EN LA “EDAD PLATEADA”',
+            }}
+          />
+          <Drawer.Screen
+            name="Medicinas"
+            component={Medicinas}
+            options={{
+              title: '¡OJO CON LAS MEDICINAS!',
+            }}
+          />
+          <Drawer.Screen
+            name="Verano"
+            component={Verano}
+            options={{
+              title: 'EN VERANO... ¡CUIDADO CON EL CALOR!',
+            }}
+          />
+          <Drawer.Screen
+            name="InsuficienciaRenal"
+            component={InsuficienciaRenal}
+            options={{
+              title: 'VIVIENDO CON INSUFICIENCIA RENAL',
+            }}
+          />
+          <Drawer.Screen
+            name="Colesterol"
+            component={Colesterol}
+            options={{
+              title: 'TENGO EL COLESTEROL ALTO... ¿Y AHORA QUÉ HAGO?',
+            }}
+          />
+          <Drawer.Screen
+            name="Bronquitis"
+            component={Bronquitis}
+            options={{
+              title: 'VIVIENDO CON BRONQUITIS CRÓNICA O ENFISEMA',
+            }}
+          />
+          <Drawer.Screen
+            name="Parkinson"
+            component={Parkinson}
+            options={{
+              title: 'VIVIENDO CON PARKINSON',
+            }}
+          />
+          <Drawer.Screen
+            name="Artrosis"
+            component={Artrosis}
+            options={{
+              title: 'ME DUELEN LAS ARTICULACIONES ¿SERÁ POR ARTROSIS?',
+            }}
+          />
+          <Drawer.Screen
+            name="Saludable"
+            component={Saludable}
+            options={{
+              title: 'ENVEJECIMIENTO SALUDABLE',
+            }}
+          />
+          <Drawer.Screen
+            name="Legal"
+            component={Legal}
+            options={{
+              title: 'LEGAL',
             }}
           />
         </Drawer.Navigator>
