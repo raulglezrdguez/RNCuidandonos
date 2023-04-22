@@ -147,7 +147,7 @@ const Legal = ({navigation}) => {
         <Paragraph>© Sociedad Cubana de Gerontología y Geriatría</Paragraph>
         <Paragraph>© OHcH</Paragraph>
         <Paragraph>CUIDÁNDONOS para cuidar mejor</Paragraph>
-        <Paragraph>Primera edición: 2020</Paragraph>
+        <Paragraph>Primera edición impresa: 2020</Paragraph>
         <Paragraph>ISBN: 978–959–7226–65–9</Paragraph>
         <Paragraph> </Paragraph>
         <Paragraph>
@@ -167,7 +167,7 @@ const Legal = ({navigation}) => {
           satisfactoria.
         </Paragraph>
         <Paragraph>CUIDÁNDONOS para cuidar mejor</Paragraph>
-        <Paragraph>Primera edición: 2022</Paragraph>
+        <Paragraph>Primera edición digital: 2022</Paragraph>
         <Paragraph>ISBN: 978–959–72269–32–8</Paragraph>
         <Paragraph> </Paragraph>
         <Image
