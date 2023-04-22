@@ -76,7 +76,6 @@ const screenOptions = props => {
         icon="notebook"
         size={20}
         onPress={() => {
-          console.log('open screenoptions');
           navigation.toggleDrawer();
         }}
       />
@@ -99,6 +98,13 @@ const Main = () => {
             name="Inicio"
             component={RootScreen}
             options={{title: 'CUIDÁNDONOS PARA CUIDAR MEJOR'}}
+          />
+          <Drawer.Screen
+            name="Legal"
+            component={Legal}
+            options={{
+              title: 'LEGAL',
+            }}
           />
           <Drawer.Screen
             name="Prologo"
@@ -264,13 +270,6 @@ const Main = () => {
             component={Saludable}
             options={{
               title: 'ENVEJECIMIENTO SALUDABLE',
-            }}
-          />
-          <Drawer.Screen
-            name="Legal"
-            component={Legal}
-            options={{
-              title: 'LEGAL',
             }}
           />
         </Drawer.Navigator>

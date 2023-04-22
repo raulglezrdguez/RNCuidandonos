@@ -63,8 +63,8 @@ const Prologo = ({navigation}) => {
         <Headline />
         <TouchableRipple
           style={[styles.link, {borderColor: colors.text}]}
-          onPress={() => navigate('Inicio')}>
-          <Text>{'Inicio'}</Text>
+          onPress={() => navigate('Legal')}>
+          <Text>{'Página legal'}</Text>
         </TouchableRipple>
         <Headline style={styles.bold}>PRÓLOGO</Headline>
         <Headline />

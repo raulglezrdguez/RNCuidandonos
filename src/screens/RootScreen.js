@@ -83,8 +83,8 @@ const RootScreen = ({navigation}) => {
         <Headline />
         <TouchableRipple
           style={[styles.link, {borderColor: colors.text}]}
-          onPress={() => navigate('Prologo')}>
-          <Text>{'Prólogo'}</Text>
+          onPress={() => navigate('Legal')}>
+          <Text>{'Página legal'}</Text>
         </TouchableRipple>
         <Headline />
       </View>

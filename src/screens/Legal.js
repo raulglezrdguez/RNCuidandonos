@@ -1,5 +1,3 @@
-/* eslint-disable prettier/prettier */
-/* eslint-disable react-native/no-inline-styles */
 import React, {useEffect, useRef} from 'react';
 import {
   ScrollView,
@@ -11,7 +9,6 @@ import {
 import {
   Headline,
   Text,
-  Subheading,
   TouchableRipple,
   useTheme,
   Paragraph,
@@ -78,8 +75,8 @@ const Legal = ({navigation}) => {
         <Headline />
         <TouchableRipple
           style={[styles.link, {borderColor: colors.text}]}
-          onPress={() => navigate('Saludable')}>
-          <Text>{'Envejecimiento saludable'}</Text>
+          onPress={() => navigate('Inicio')}>
+          <Text>{'CUIDÁNDONOS PARA CUIDAR MEJOR'}</Text>
         </TouchableRipple>
         <Headline style={styles.bold}>Página Legal</Headline>
         <Headline />
@@ -180,7 +177,13 @@ const Legal = ({navigation}) => {
         />
 
         <Headline />
+        <TouchableRipple
+          style={[styles.link, {borderColor: colors.text}]}
+          onPress={() => navigate('Prologo')}>
+          <Text>{'Prólogo'}</Text>
+        </TouchableRipple>
       </View>
+      <Headline />
     </ScrollView>
   );
 };

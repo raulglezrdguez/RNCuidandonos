@@ -120,6 +120,11 @@ const DrawerContent = props => {
           </TouchableRipple>
           <TouchableRipple
             style={[styles.link, {borderColor: colors.text}]}
+            onPress={() => navigate('Legal')}>
+            <Text>{'Página legal'}</Text>
+          </TouchableRipple>
+          <TouchableRipple
+            style={[styles.link, {borderColor: colors.text}]}
             onPress={() => navigate('Prologo')}>
             <Text>{'Prólogo'}</Text>
           </TouchableRipple>
@@ -266,11 +271,6 @@ const DrawerContent = props => {
             onPress={() => navigate('Saludable')}>
             <Text>{'Envejecimieto saludable'}</Text>
           </TouchableRipple>
-          <TouchableRipple
-            style={[styles.link, {borderColor: colors.text}]}
-            onPress={() => navigate('Legal')}>
-            <Text>{'Página legal'}</Text>
-          </TouchableRipple>
         </Drawer.Section>
       </Animated.View>
     </DrawerContentScrollView>
@@ -301,6 +301,7 @@ const styles = StyleSheet.create({
     margin: 2,
     paddingVertical: 6,
     paddingHorizontal: 16,
+    marginBottom: 15,
   },
 });
 
